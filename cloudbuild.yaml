@@ -3,7 +3,7 @@
 steps:
   - name: 'python'
     entrypoint: 'python'
-    args: ['-m', 'pip', 'install', '-r', 'requirements-dev.txt', '--user'] 
+    args: ['-m', 'pip', 'install', '.[dev]', '--user'] 
   - name: 'python'
     entrypoint: 'python'
     args: ['-m', 'pip', 'freeze'] 
