@@ -1,0 +1,15 @@
+# cloudbuild.yaml for Google Cloud Build (Python unit tests)
+
+steps:
+  - name: 'python'
+    entrypoint: 'python'
+    args: ['-m', 'pip', 'install', '-r', 'requirements-dev.txt', '--user'] 
+  - name: 'python'
+    entrypoint: 'python'
+    args: ['-m', 'pip', 'freeze'] 
+  - name: 'python'
+    entrypoint: 'python'
+    args: ['-m', 'pytest', 'tests/'] 
+
+options:
+  logging: CLOUD_LOGGING_ONLY
