@@ -2,14 +2,17 @@
 
 steps:
   - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
+    entrypoint: 'pip'
+    args: ['install', '.[dev]'] 
+  - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
     entrypoint: 'go-test'
     args: ['tests'] 
-  - name: 'python'
-    entrypoint: 'python'
-    args: ['-m', 'pip', 'freeze'] 
-  - name: 'python'
-    entrypoint: 'python'
-    args: ['-m', 'pytest', 'tests/'] 
+  # - name: 'python'
+  #   entrypoint: 'python'
+  #   args: ['-m', 'pip', 'freeze'] 
+  # - name: 'python'
+  #   entrypoint: 'python'
+  #   args: ['-m', 'pytest', 'tests/'] 
 
 options:
   logging: CLOUD_LOGGING_ONLY
