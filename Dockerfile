@@ -6,4 +6,6 @@ RUN python -m pip install -U "urllib3<2.0.0"
 
 RUN python -m pip install pytest
 
-COPY go-test.sh /bin/go-test
+COPY go-test.sh /usr/bin/go-test
+
+RUN chmod 755 /usr/bin/go-test
