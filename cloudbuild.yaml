@@ -7,6 +7,11 @@ steps:
   - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
     entrypoint: 'go-test'
     args: ['tests'] 
+  # - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-backtester:0.1'
+  #   entrypoint: 'go-backtest'
+  #   args: ['pipeline123', 'gs://infra_config.yaml'] 
+  # - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
+  #   entrypoint: 'go-build'
   # - name: 'python'
   #   entrypoint: 'python'
   #   args: ['-m', 'pip', 'freeze'] 
