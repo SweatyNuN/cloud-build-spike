@@ -1,9 +1,9 @@
 # cloudbuild.yaml for Google Cloud Build (Python unit tests)
 
 steps:
-  - name: 'python'
-    entrypoint: 'python'
-    args: ['-m', 'pip', 'install', '.[dev]', '--user'] 
+  - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
+    entrypoint: 'go-test'
+    args: ['tests'] 
   - name: 'python'
     entrypoint: 'python'
     args: ['-m', 'pip', 'freeze'] 
