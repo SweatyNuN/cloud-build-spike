@@ -3,7 +3,7 @@
 steps:
   - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
     entrypoint: 'pip'
-    args: ['install', '.[dev]'] 
+    args: ['install', '.[dev]', '--user'] 
   - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
     entrypoint: 'go-test'
     args: ['tests'] 
