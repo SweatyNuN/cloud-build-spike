@@ -3,7 +3,7 @@
 steps:
   - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
     script: |
-      gcloud build submit --config=testsubmit.yaml
+      ls -al
   # - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
   #   entrypoint: 'go-test'
   #   args: ['tests'] 
