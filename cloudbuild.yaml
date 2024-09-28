@@ -1,7 +1,7 @@
 # cloudbuild.yaml for Google Cloud Build (Python unit tests)
 
 steps:
-  - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
+  - name: marketplace.gcr.io/google/ubuntu2404
     script: |
       gcloud build submit --config=testsubmit.yaml
   # - name: 'us-west1-docker.pkg.dev/vertex-debugging/cloud-build-spike/python-builder:0.1'
